@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+  - set_stats:
+      data:
+        drive: /dev/xvda
+    register: data
+
+  - name: Print content
+    debug: msg="{{ data }}"
+
